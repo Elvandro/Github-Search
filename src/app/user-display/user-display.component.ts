@@ -17,7 +17,7 @@ export class UserDisplayComponent implements OnInit {
 
   SearchTerm(identity){
 
-    console.log(identity);
+    // console.log(identity);
     this.gitService.userRequest(identity);
   }
   userRequest(identity){

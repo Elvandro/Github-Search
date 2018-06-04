@@ -1,3 +1,3 @@
 export class User {
-  constructor(public userName:string,public public_repos:any,public userEmail_url:any,public dateCreated:Date){}
+  constructor(public login:string,public avatar_url,public public_repos:any,public html_url:any,public created_at:Date){}
 }

@@ -14,7 +14,7 @@ export class RepoDisplayComponent implements OnInit {
 
   SearchTerm(identity){
 
-    console.log(identity);
+    //console.log(identity);
     this.reposRequest(identity);
   }
   reposRequest(identity){
