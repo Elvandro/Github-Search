@@ -10,7 +10,7 @@ export class UserSearchComponent implements OnInit {
 
   @Output() user = new EventEmitter<any>()
 
-  obtainUser(){
+  searchUser(){
     console.log(this.username);
     this.user.emit(this.username);
     this.username = "";

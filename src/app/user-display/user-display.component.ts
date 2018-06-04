@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { GitService } from '../git.service'
 import { User } from '../user'
-import { Repository } from '..repository'
+import { Repository } from '../repository'
 
 @Component({
   selector: 'app-user-display',
@@ -18,18 +18,18 @@ export class UserDisplayComponent implements OnInit {
   SearchTerm(identity){
 
     console.log(identity);
-    this.GitService.userRequest(identity);
+    this.gitService.userRequest(identity);
   }
   userRequest(identity){
-    this.GitService.userRequest(identity);
+    this.gitService.userRequest(identity);
   }
 
-  constructor(private GitService:GitService) {
+  constructor(private gitService:GitService) {
   }
 
   ngOnInit() {
 
-    this.profiles=this.GitService.profiles;
+    this.profiles=this.gitService.profiles;
   }
 
 }

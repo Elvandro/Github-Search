@@ -1,7 +1,4 @@
 import { Injectable } from '@angular/core';
-import "rxjs/add/operator/map";
-import "rxjs/add/operator/toPromise";
-import { Observable } from 'rxjs/Observable'
 import { HttpClient } from '@angular/common/http';
 import { environment } from "../environments/environment";
 import { User } from './user';
@@ -23,20 +20,20 @@ export class GitService {
    }
 
    userRequest(identity:string){
-     interface ApiResponse{
+     interface UserResponse{
        userName:string;
        userEmail_url:any;
        public_repos:number;
        dateCreated:Date
      }
      let promise = new Promise((resolve,reject)=>{
-       this.http.get<ApiResponse>(environment.apiUrl+identity+environment.KEY).toPromise().then(
+       this.http.get<UserResponse>(environment.apiUrl+identity+environment.KEY).toPromise().then(
          res=>{
            this.profiles.userName = res.userName;
            this.profiles.public_repos = res.public_repos;
            console.log(this.profiles.userName)
 
-           this.profiles.userEmail = res.userEmail;
+           this.profiles.userEmail_url = res.userEmail_url;
            this.profiles.dateCreated = res.dateCreated;
            console.log(this.profiles.dateCreated);
 

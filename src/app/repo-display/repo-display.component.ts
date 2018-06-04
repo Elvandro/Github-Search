@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { GitService } from '../git.service'
 import { User } from '../user'
-import { Repository } from '..repository'
+import { Repository } from '../repository'
 
 @Component({
   selector: 'app-repo-display',
@@ -18,14 +18,14 @@ export class RepoDisplayComponent implements OnInit {
     this.reposRequest(identity);
   }
   reposRequest(identity){
-    this.GitService.repoRequest(identity);
+    this.gitService.repoRequest(identity);
   }
 
-  constructor(private GitService:GitService) { }
+  constructor(private gitService:GitService) { }
 
   ngOnInit() {
 
-    this.profiles=this.GitService.profiles;
+    this.repos=this.gitService.repos;
 
   }
 
