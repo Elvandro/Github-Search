@@ -1,3 +1,9 @@
-<p>
-  user-search works!
-</p>
+<div class="container">
+  <form>
+    <div class="form-group">
+      <label for="username">Github Username</label>
+      <input type="text" class="form-control" name="user" id="gitSearch" placeholder="Search Github" [(ngModel)]="username"(keyup)="obtainUser()">
+    </div>
+  </form>
+  {{username}}
+</div> 
