@@ -48,7 +48,7 @@ export class GitService {
       name:string;
       repo_url:any;
       description:any;
-      dateCreated:Date;
+      dateCreated:Date
     }
     let promise = new Promise((resolve,reject)=>{
       this.http.get<Repositories>(environment.apiUrl+profile+'/repos'+environment.Key).toPromise().then(
