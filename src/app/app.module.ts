@@ -3,11 +3,13 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { UserSearchComponent } from './user-search/user-search.component';
+import { UserDisplayComponent } from './user-display/user-display.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    UserSearchComponent
+    UserSearchComponent,
+    UserDisplayComponent
   ],
   imports: [
     BrowserModule
