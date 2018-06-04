@@ -20,6 +20,9 @@ export class UserDisplayComponent implements OnInit {
     console.log(identity);
     this.GitService.userRequest(identity);
   }
+  userRequest(identity){
+    this.GitService.userRequest(identity);
+  }
 
   constructor(private GitService:GitService) {
   }
