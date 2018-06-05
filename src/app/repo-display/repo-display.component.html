@@ -2,7 +2,7 @@
 <br>
 <div class="container-flex">
   <div class="card-columns">
-    <div class="card" *ngFor='let repos of gitService.results'>
+    <div class="card" *ngFor='let repos of repos'>
       <div class="card-body">
         <h5 class="card-title">{{repos.name}}</h5>
         <p class="card-text">{{repos.description}}</p>
