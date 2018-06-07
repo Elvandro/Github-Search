@@ -1,8 +1,14 @@
-.container-flex{
-  background-color: silver;
+.container-flex {
+  background-color: gold;
   padding: 20px 20px 20px 20px;
+  color: navy;
 }
 h1 {
   text-align: center;
   color: #369;
+}
+.navbar {
+  width: 500px;
+  margin-left: 390px;
+  color: navy;
 }
